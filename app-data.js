@@ -476,6 +476,7 @@ window.APP_DATA = {
         "group": "翘舌音",
         "sound": "shī",
         "source": "shi1",
+        "tts": "狮",
         "emoji": "🦁",
         "sentence": "小狮子数石头，数来又数去。",
         "audio": "assets/audio/pinyin/sh.mp3?v=1"
