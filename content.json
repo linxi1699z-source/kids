@@ -1,0 +1,442 @@
+{
+  "pinyin": {
+    "categories": [
+      {
+        "id": "initials",
+        "title": "声母",
+        "desc": "b p m f · d t n l · g k h · j q x · y w",
+        "note": "平舌音和翘舌音放在最后，单独练一练。",
+        "items": ["b", "p", "m", "f", "d", "t", "n", "l", "g", "k", "h", "j", "q", "x", "y", "w"]
+      },
+      {
+        "id": "finals",
+        "title": "韵母",
+        "desc": "单韵母 a o e i u ü",
+        "items": ["a", "o", "e", "i", "u", "ü"]
+      },
+      {
+        "id": "compound",
+        "title": "复韵母",
+        "desc": "ai ei ui · ao ou iu · ie üe er",
+        "items": ["ai", "ei", "ui", "ao", "ou", "iu", "ie", "üe", "er"]
+      },
+      {
+        "id": "special",
+        "title": "平舌和翘舌",
+        "desc": "平舌音 z c s · 翘舌音 zh ch sh r",
+        "note": "舌头放平是平舌，舌头翘起是翘舌。",
+        "items": ["z", "c", "s", "zh", "ch", "sh", "r"]
+      }
+    ],
+    "items": [
+      {
+        "id": "b",
+        "display": "b",
+        "category": "initials",
+        "group": "声母",
+        "sound": "bō",
+        "source": "bo1",
+        "emoji": "🧸",
+        "sentence": "爸爸抱宝宝，宝宝不怕。"
+      },
+      {
+        "id": "p",
+        "display": "p",
+        "category": "initials",
+        "group": "声母",
+        "sound": "pō",
+        "source": "po1",
+        "emoji": "🏀",
+        "sentence": "皮皮拍皮球，啪啪啪。"
+      },
+      {
+        "id": "m",
+        "display": "m",
+        "category": "initials",
+        "group": "声母",
+        "sound": "mō",
+        "source": "mo1",
+        "emoji": "🐱",
+        "sentence": "妈妈摸摸小猫，小猫喵喵叫。"
+      },
+      {
+        "id": "f",
+        "display": "f",
+        "category": "initials",
+        "group": "声母",
+        "sound": "fō",
+        "source": "fo1",
+        "emoji": "🪁",
+        "sentence": "风吹风筝飞，飞得高又高。"
+      },
+      {
+        "id": "d",
+        "display": "d",
+        "category": "initials",
+        "group": "声母",
+        "sound": "dē",
+        "source": "de1",
+        "emoji": "🧱",
+        "sentence": "弟弟搭积木，搭了一栋大楼。"
+      },
+      {
+        "id": "t",
+        "display": "t",
+        "category": "initials",
+        "group": "声母",
+        "sound": "tē",
+        "source": "te1",
+        "emoji": "🐰",
+        "sentence": "兔兔跳跳跳，跳到滑梯上。"
+      },
+      {
+        "id": "n",
+        "display": "n",
+        "category": "initials",
+        "group": "声母",
+        "sound": "nē",
+        "source": "ne1",
+        "emoji": "🥛",
+        "sentence": "牛牛拿牛奶，奶奶点点头。"
+      },
+      {
+        "id": "l",
+        "display": "l",
+        "category": "initials",
+        "group": "声母",
+        "sound": "lē",
+        "source": "le1",
+        "emoji": "🚗",
+        "sentence": "乐乐拉小车，拉呀拉，拉得快。"
+      },
+      {
+        "id": "g",
+        "display": "g",
+        "category": "initials",
+        "group": "声母",
+        "sound": "gē",
+        "source": "ge1",
+        "emoji": "⚽",
+        "sentence": "哥哥滚皮球，滚过小水沟。"
+      },
+      {
+        "id": "k",
+        "display": "k",
+        "category": "initials",
+        "group": "声母",
+        "sound": "kē",
+        "source": "ke1",
+        "emoji": "🚙",
+        "sentence": "可可开小车，快快开过来。"
+      },
+      {
+        "id": "h",
+        "display": "h",
+        "category": "initials",
+        "group": "声母",
+        "sound": "hē",
+        "source": "he1",
+        "emoji": "🌸",
+        "sentence": "花花画红花，画了一朵大红花。"
+      },
+      {
+        "id": "j",
+        "display": "j",
+        "category": "initials",
+        "group": "声母",
+        "sound": "jī",
+        "source": "ji1",
+        "emoji": "🧩",
+        "sentence": "杰杰捡积木，捡了九块。"
+      },
+      {
+        "id": "q",
+        "display": "q",
+        "category": "initials",
+        "group": "声母",
+        "sound": "qī",
+        "source": "qi1",
+        "emoji": "🚲",
+        "sentence": "琪琪去骑车，骑过小桥。"
+      },
+      {
+        "id": "x",
+        "display": "x",
+        "category": "initials",
+        "group": "声母",
+        "sound": "xī",
+        "source": "xi1",
+        "emoji": "🚗",
+        "sentence": "小小喜欢小汽车，笑哈哈。"
+      },
+      {
+        "id": "y",
+        "display": "y",
+        "category": "initials",
+        "group": "声母",
+        "sound": "yī",
+        "source": "yi1",
+        "emoji": "🦖",
+        "sentence": "洋洋用积木，搭了一个大恐龙。"
+      },
+      {
+        "id": "w",
+        "display": "w",
+        "category": "initials",
+        "group": "声母",
+        "sound": "wū",
+        "source": "wu1",
+        "emoji": "🐶",
+        "sentence": "汪汪队的小狗，汪汪叫。"
+      },
+      {
+        "id": "a",
+        "display": "a",
+        "category": "finals",
+        "group": "韵母",
+        "sound": "ā",
+        "source": "a1",
+        "emoji": "🦖",
+        "sentence": "啊，大恐龙，张大嘴巴！"
+      },
+      {
+        "id": "o",
+        "display": "o",
+        "category": "finals",
+        "group": "韵母",
+        "sound": "ō",
+        "source": "o1",
+        "emoji": "🐓",
+        "sentence": "喔喔喔，大公鸡叫我们起床。"
+      },
+      {
+        "id": "e",
+        "display": "e",
+        "category": "finals",
+        "group": "韵母",
+        "sound": "ē",
+        "source": "e1",
+        "emoji": "🦢",
+        "sentence": "鹅鹅鹅，白鹅下小河。"
+      },
+      {
+        "id": "i",
+        "display": "i",
+        "category": "finals",
+        "group": "韵母",
+        "sound": "yī",
+        "source": "yi1",
+        "emoji": "🐜",
+        "sentence": "一只小蚂蚁，爬上小汽车。"
+      },
+      {
+        "id": "u",
+        "display": "u",
+        "category": "finals",
+        "group": "韵母",
+        "sound": "wū",
+        "source": "wu1",
+        "emoji": "🐰",
+        "sentence": "小兔子，穿裤子，吃萝卜。"
+      },
+      {
+        "id": "ü",
+        "display": "ü",
+        "category": "finals",
+        "group": "韵母",
+        "sound": "yū",
+        "source": "yu1",
+        "emoji": "🐟",
+        "sentence": "绿绿的水，小鱼游呀游。"
+      },
+      {
+        "id": "ai",
+        "display": "ai",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "āi",
+        "source": "ai1",
+        "emoji": "👵",
+        "sentence": "奶奶爱宝宝，宝宝爱奶奶。"
+      },
+      {
+        "id": "ei",
+        "display": "ei",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "ēi",
+        "source": "ei1",
+        "emoji": "🎒",
+        "sentence": "妹妹背书包，开开心心去学校。"
+      },
+      {
+        "id": "ui",
+        "display": "ui",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "wēi",
+        "source": "wei1",
+        "emoji": "🐢",
+        "sentence": "小乌龟，爬呀爬，爬到水边看小花。"
+      },
+      {
+        "id": "ao",
+        "display": "ao",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "āo",
+        "source": "ao1",
+        "emoji": "🐱",
+        "sentence": "小猫跳高，跳到树梢。"
+      },
+      {
+        "id": "ou",
+        "display": "ou",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "ōu",
+        "source": "ou1",
+        "emoji": "🐒",
+        "sentence": "小猴子，翻跟头，摘个大石榴。"
+      },
+      {
+        "id": "iu",
+        "display": "iu",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "yōu",
+        "source": "you1",
+        "emoji": "🐮",
+        "sentence": "小牛牛，去踢球，球儿滚进小水沟。"
+      },
+      {
+        "id": "ie",
+        "display": "ie",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "yē",
+        "source": "ye1",
+        "emoji": "🦋",
+        "sentence": "蝴蝶飞，飞过小树叶。"
+      },
+      {
+        "id": "üe",
+        "display": "üe",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "yuē",
+        "source": "yue1",
+        "emoji": "🌙",
+        "sentence": "月儿圆，月儿亮，宝宝抬头看月亮。"
+      },
+      {
+        "id": "er",
+        "display": "er",
+        "category": "compound",
+        "group": "复韵母",
+        "sound": "ér",
+        "source": "er2",
+        "emoji": "👂",
+        "sentence": "小耳朵，听儿歌，真快乐。"
+      },
+      {
+        "id": "z",
+        "display": "z",
+        "category": "special",
+        "group": "平舌音",
+        "sound": "zī",
+        "source": "zi1",
+        "emoji": "👟",
+        "sentence": "早早坐好，自己吃饭。"
+      },
+      {
+        "id": "c",
+        "display": "c",
+        "category": "special",
+        "group": "平舌音",
+        "sound": "cī",
+        "source": "ci1",
+        "emoji": "🧽",
+        "sentence": "聪聪擦桌子，擦得真干净。"
+      },
+      {
+        "id": "s",
+        "display": "s",
+        "category": "special",
+        "group": "平舌音",
+        "sound": "sī",
+        "source": "si1",
+        "emoji": "🐿️",
+        "sentence": "三只小松鼠，树上数松果。"
+      },
+      {
+        "id": "zh",
+        "display": "zh",
+        "category": "special",
+        "group": "翘舌音",
+        "sound": "zhī",
+        "source": "zhi1",
+        "emoji": "🕷️",
+        "sentence": "一只蜘蛛吱吱吱，趴在树枝上。"
+      },
+      {
+        "id": "ch",
+        "display": "ch",
+        "category": "special",
+        "group": "翘舌音",
+        "sound": "chī",
+        "source": "chi1",
+        "emoji": "🐛",
+        "sentence": "小虫吃树叶，吃得饱饱的。"
+      },
+      {
+        "id": "sh",
+        "display": "sh",
+        "category": "special",
+        "group": "翘舌音",
+        "sound": "shī",
+        "source": "shi1",
+        "emoji": "🦁",
+        "sentence": "小狮子数石头，数来又数去。"
+      },
+      {
+        "id": "r",
+        "display": "r",
+        "category": "special",
+        "group": "翘舌音",
+        "sound": "rī",
+        "source": "ri1",
+        "emoji": "☀️",
+        "sentence": "热热的太阳，热得冒汗。"
+      }
+    ]
+  },
+  "english": [
+    {"letter": "A", "word": "Apple", "zh": "苹果", "sentence": "A is for apple.", "sentenceZh": "苹果。", "emoji": "🍎"},
+    {"letter": "B", "word": "Ball", "zh": "球", "sentence": "B is for ball.", "sentenceZh": "球。", "emoji": "⚽"},
+    {"letter": "C", "word": "Car", "zh": "小汽车", "sentence": "C is for car.", "sentenceZh": "小汽车。", "emoji": "🚗"},
+    {"letter": "D", "word": "Dinosaur", "zh": "恐龙", "sentence": "D is for dinosaur.", "sentenceZh": "恐龙。", "emoji": "🦖"},
+    {"letter": "E", "word": "Elephant", "zh": "大象", "sentence": "E is for elephant.", "sentenceZh": "大象。", "emoji": "🐘"},
+    {"letter": "F", "word": "Fire truck", "zh": "消防车", "sentence": "F is for fire truck.", "sentenceZh": "消防车。", "emoji": "🚒"},
+    {"letter": "G", "word": "Grapes", "zh": "葡萄", "sentence": "G is for grapes.", "sentenceZh": "葡萄。", "emoji": "🍇"},
+    {"letter": "H", "word": "Helicopter", "zh": "直升机", "sentence": "H is for helicopter.", "sentenceZh": "直升机。", "emoji": "🚁"},
+    {"letter": "I", "word": "Ice cream", "zh": "冰淇淋", "sentence": "I is for ice cream.", "sentenceZh": "冰淇淋。", "emoji": "🍦"},
+    {"letter": "J", "word": "Juice", "zh": "果汁", "sentence": "J is for juice.", "sentenceZh": "果汁。", "emoji": "🧃"},
+    {"letter": "K", "word": "Kite", "zh": "风筝", "sentence": "K is for kite.", "sentenceZh": "风筝。", "emoji": "🪁"},
+    {"letter": "L", "word": "Lion", "zh": "狮子", "sentence": "L is for lion.", "sentenceZh": "狮子。", "emoji": "🦁"},
+    {"letter": "M", "word": "Moon", "zh": "月亮", "sentence": "M is for moon.", "sentenceZh": "月亮。", "emoji": "🌙"},
+    {"letter": "N", "word": "Nose", "zh": "鼻子", "sentence": "N is for nose.", "sentenceZh": "鼻子。", "emoji": "👃"},
+    {"letter": "O", "word": "Orange", "zh": "橙子", "sentence": "O is for orange.", "sentenceZh": "橙子。", "emoji": "🍊"},
+    {"letter": "P", "word": "Panda", "zh": "熊猫", "sentence": "P is for panda.", "sentenceZh": "熊猫。", "emoji": "🐼"},
+    {"letter": "Q", "word": "Queen", "zh": "女王", "sentence": "Q is for queen.", "sentenceZh": "女王。", "emoji": "👑"},
+    {"letter": "R", "word": "Rocket", "zh": "火箭", "sentence": "R is for rocket.", "sentenceZh": "火箭。", "emoji": "🚀"},
+    {"letter": "S", "word": "Sun", "zh": "太阳", "sentence": "S is for sun.", "sentenceZh": "太阳。", "emoji": "☀️"},
+    {"letter": "T", "word": "Train", "zh": "火车", "sentence": "T is for train.", "sentenceZh": "火车。", "emoji": "🚂"},
+    {"letter": "U", "word": "Umbrella", "zh": "雨伞", "sentence": "U is for umbrella.", "sentenceZh": "雨伞。", "emoji": "☂️"},
+    {"letter": "V", "word": "Van", "zh": "面包车", "sentence": "V is for van.", "sentenceZh": "面包车。", "emoji": "🚐"},
+    {"letter": "W", "word": "Water", "zh": "水", "sentence": "W is for water.", "sentenceZh": "水。", "emoji": "💧"},
+    {"letter": "X", "word": "Xylophone", "zh": "木琴", "sentence": "X is for xylophone.", "sentenceZh": "木琴。", "emoji": "🎼"},
+    {"letter": "Y", "word": "Yo-yo", "zh": "悠悠球", "sentence": "Y is for yo-yo.", "sentenceZh": "悠悠球。", "emoji": "🪀"},
+    {"letter": "Z", "word": "Zebra", "zh": "斑马", "sentence": "Z is for zebra.", "sentenceZh": "斑马。", "emoji": "🦓"}
+  ]
+}

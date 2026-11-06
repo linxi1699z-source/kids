@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#fbf6ea" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="面向 4–5 岁孩子的拼音与英语启蒙：拼音识别、发音、例句，26 个英文字母与例词，女声发音、可点击跟读。"
+    />
+    <meta property="og:title" content="小芽拼读 · 拼音与英语启蒙" />
+    <meta
+      property="og:description"
+      content="拼音（声母、韵母、复韵母、平舌翘舌）与英语字母启蒙，移动端友好的点读卡片。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>小芽拼读 · 拼音与英语启蒙</title>
+  </head>
+  <body>
+    <div class="app">
+      <header id="header" class="topbar"></header>
+      <main id="view" class="view">
+        <div class="boot">
+          <span class="boot-dot"></span>
+          <span>小芽正在准备…</span>
+        </div>
+      </main>
+    </div>
+    <div id="dock" class="dock"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <noscript>
+      <p style="padding: 24px; text-align: center; color: #5f6d61">
+        需要开启 JavaScript 才能使用小芽拼读。
+      </p>
+    </noscript>
+    <script src="app-data.js?v=2"></script>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

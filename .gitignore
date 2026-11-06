@@ -1,0 +1,17 @@
+# 构建与开发环境（不提交）
+.venv/
+.cache/
+_tts_test/
+__pycache__/
+*.pyc
+
+# 本地预览截图（不提交）
+preview/
+
+# 本地依赖与系统文件
+node_modules/
+.DS_Store
+*.log
+
+# 产物已生成在 assets/ 与 app-data.js；如需重新生成请运行：
+#   .venv/bin/python tools/build_assets.py
