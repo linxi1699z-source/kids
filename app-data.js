@@ -407,8 +407,8 @@ window.APP_DATA = {
         "display": "er",
         "category": "compound",
         "group": "复韵母",
-        "sound": "ér",
-        "source": "er2",
+        "sound": "ēr",
+        "source": "er1",
         "emoji": "👂",
         "sentence": "小耳朵，听儿歌，真快乐。",
         "audio": "assets/audio/pinyin/er.mp3?v=1"
