@@ -464,6 +464,7 @@ window.APP_DATA = {
         "group": "翘舌音",
         "sound": "chī",
         "source": "chi1",
+        "tts": "吃",
         "emoji": "🐛",
         "sentence": "小虫吃树叶，吃得饱饱的。",
         "audio": "assets/audio/pinyin/ch.mp3?v=1"

@@ -187,15 +187,22 @@ def build_pinyin(content: dict) -> list[dict]:
     output_items = []
 
     for item in items:
-        source = item["source"]
-        source_mp3 = CMN_CACHE / f"cmn-{source}.mp3"
-        download(f"{CMN_BASE}/cmn-{source}.mp3", source_mp3)
-        source_wav = TMP / f"cmn-{source}.wav"
-        decode_to_wav(source_mp3, source_wav)
-        if source not in cache:
-            cache[source] = load_clip(source_wav, atempo=0.9)
+        if item.get("tts"):
+            # 用 Edge TTS 朗读汉字（保证声母呼读音准确，如「吃」= chī）。
+            item_mp3 = tts_cache_path("pinyin-item", item["id"], item["tts"], ZH_VOICE, "-10%")
+            item_wav = TMP / f"pinyin-item-{item['id']}.wav"
+            decode_to_wav(item_mp3, item_wav)
+            item_audio = load_clip(item_wav)
+        else:
+            source = item["source"]
+            source_mp3 = CMN_CACHE / f"cmn-{source}.mp3"
+            download(f"{CMN_BASE}/cmn-{source}.mp3", source_mp3)
+            source_wav = TMP / f"cmn-{source}.wav"
+            decode_to_wav(source_mp3, source_wav)
+            if source not in cache:
+                cache[source] = load_clip(source_wav, atempo=0.9)
+            item_audio = cache[source]
 
-        item_audio = cache[source]
         case_mp3 = tts_cache_path("pinyin-case", item["id"], item["sentence"], ZH_VOICE, "-10%")
         case_wav = TMP / f"pinyin-case-{item['id']}.wav"
         decode_to_wav(case_mp3, case_wav)
@@ -301,6 +308,16 @@ def main() -> None:
 
     jobs = []
     for item in content["pinyin"]["items"]:
+        if item.get("tts"):
+            jobs.append(
+                {
+                    "kind": "pinyin-item",
+                    "key": item["id"],
+                    "text": item["tts"],
+                    "voice": ZH_VOICE,
+                    "dest": tts_cache_path("pinyin-item", item["id"], item["tts"], ZH_VOICE, "-10%"),
+                }
+            )
         jobs.append(
             {
                 "kind": "pinyin-case",
