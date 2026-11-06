@@ -66,6 +66,7 @@
         "group": "声母",
         "sound": "fō",
         "source": "fo1",
+        "tts_tone1": "佛",
         "emoji": "🪁",
         "sentence": "风吹风筝飞，飞得高又高。"
       },
@@ -408,6 +409,7 @@
         "group": "翘舌音",
         "sound": "rī",
         "source": "ri1",
+        "tts_tone1": "日",
         "emoji": "☀️",
         "sentence": "热热的太阳，热得冒汗。"
       }

@@ -112,6 +112,7 @@ window.APP_DATA = {
         "group": "声母",
         "sound": "fō",
         "source": "fo1",
+        "tts_tone1": "佛",
         "emoji": "🪁",
         "sentence": "风吹风筝飞，飞得高又高。",
         "audio": "assets/audio/pinyin/f.mp3?v=1"
@@ -488,6 +489,7 @@ window.APP_DATA = {
         "group": "翘舌音",
         "sound": "rī",
         "source": "ri1",
+        "tts_tone1": "日",
         "emoji": "☀️",
         "sentence": "热热的太阳，热得冒汗。",
         "audio": "assets/audio/pinyin/r.mp3?v=1"

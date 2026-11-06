@@ -17,6 +17,7 @@ import edge_tts
 import imageio_ffmpeg
 import librosa
 import numpy as np
+import parselmouth
 import soundfile as sf
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -44,6 +45,20 @@ PYINYIN_FILENAME = {"ü": "v", "üe": "ve"}
 
 def pinyin_filename(item_id: str) -> str:
     return PYINYIN_FILENAME.get(item_id, item_id)
+
+
+def flatten_first_tone(src_wav: Path, dst_wav: Path, target_hz: float = 285.0) -> None:
+    """用 Praat 把音节基频拉平到第一声（高平调）。"""
+    from parselmouth.praat import call
+
+    snd = parselmouth.Sound(str(src_wav))
+    manip = call(snd, "To Manipulation", 0.005, 75.0, 600.0)
+    tier = call("Create PitchTier", "flat", 0.0, snd.duration)
+    call(tier, "Add point", 0.0, target_hz)
+    call(tier, "Add point", snd.duration, target_hz)
+    call([manip, tier], "Replace pitch tier")
+    resynth = call(manip, "Get resynthesis (overlap-add)")
+    resynth.save(str(dst_wav), parselmouth.SoundFileFormat.WAV)
 
 
 def run(cmd: list[str]) -> None:
@@ -193,6 +208,14 @@ def build_pinyin(content: dict) -> list[dict]:
             item_wav = TMP / f"pinyin-item-{item['id']}.wav"
             decode_to_wav(item_mp3, item_wav)
             item_audio = load_clip(item_wav)
+        elif item.get("tts_tone1"):
+            # 用 Edge TTS 朗读汉字，再把基频拉平到第一声（如「佛」fó → fō）。
+            item_mp3 = tts_cache_path("pinyin-item-t1", item["id"], item["tts_tone1"], ZH_VOICE, "-10%")
+            item_wav = TMP / f"pinyin-item-t1-{item['id']}.wav"
+            item_wav_flat = TMP / f"pinyin-item-t1-{item['id']}-flat.wav"
+            decode_to_wav(item_mp3, item_wav)
+            flatten_first_tone(item_wav, item_wav_flat)
+            item_audio = load_clip(item_wav_flat)
         else:
             source = item["source"]
             source_mp3 = CMN_CACHE / f"cmn-{source}.mp3"
@@ -316,6 +339,16 @@ def main() -> None:
                     "text": item["tts"],
                     "voice": ZH_VOICE,
                     "dest": tts_cache_path("pinyin-item", item["id"], item["tts"], ZH_VOICE, "-10%"),
+                }
+            )
+        if item.get("tts_tone1"):
+            jobs.append(
+                {
+                    "kind": "pinyin-item-t1",
+                    "key": item["id"],
+                    "text": item["tts_tone1"],
+                    "voice": ZH_VOICE,
+                    "dest": tts_cache_path("pinyin-item-t1", item["id"], item["tts_tone1"], ZH_VOICE, "-10%"),
                 }
             )
         jobs.append(
