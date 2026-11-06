@@ -229,17 +229,21 @@ def build_english(content: dict) -> list[dict]:
         letter = entry["letter"]
         lower = letter.lower()
         letter_mp3 = tts_cache_path("en-letter", letter, f"{letter}.", EN_VOICE, "-10%")
+        word_mp3 = tts_cache_path("en-word", letter, entry["word"], EN_VOICE, "-10%")
         sentence_mp3 = tts_cache_path("en-sentence", letter, entry["sentence"], EN_VOICE, "-10%")
         zh_mp3 = tts_cache_path("en-zh", letter, entry["sentenceZh"], ZH_VOICE, "-10%")
 
         letter_wav = TMP / f"en-letter-{letter}.wav"
+        word_wav = TMP / f"en-word-{letter}.wav"
         sentence_wav = TMP / f"en-sentence-{letter}.wav"
         zh_wav = TMP / f"en-zh-{letter}.wav"
         decode_to_wav(letter_mp3, letter_wav)
+        decode_to_wav(word_mp3, word_wav)
         decode_to_wav(sentence_mp3, sentence_wav)
         decode_to_wav(zh_mp3, zh_wav)
 
         letter_audio = load_clip(letter_wav)
+        word_audio = load_clip(word_wav)
         sentence_audio = load_clip(sentence_wav)
         zh_audio = load_clip(zh_wav)
 
@@ -248,6 +252,8 @@ def build_english(content: dict) -> list[dict]:
             parts.append(letter_audio)
             parts.append(silence(1.0 if index < 2 else 1.1))
         for index in range(2):
+            parts.append(word_audio)
+            parts.append(silence(0.6))
             parts.append(sentence_audio)
             parts.append(silence(0.7))
             parts.append(zh_audio)
@@ -316,6 +322,13 @@ def main() -> None:
                     "dest": tts_cache_path("en-letter", letter, f"{letter}.", EN_VOICE, "-10%"),
                 },
                 {
+                    "kind": "en-word",
+                    "key": letter,
+                    "text": entry["word"],
+                    "voice": EN_VOICE,
+                    "dest": tts_cache_path("en-word", letter, entry["word"], EN_VOICE, "-10%"),
+                },
+                {
                     "kind": "en-sentence",
                     "key": letter,
                     "text": entry["sentence"],
@@ -343,9 +356,9 @@ def main() -> None:
         for category in content["pinyin"]["categories"]
         for item_id in category["items"]
     ]
-    english_order = [
-        item["id"]
-        for item in english_items
+    # 大写 A-Z 全部排在前，小写 a-z 全部排在后（详情页上一个/下一个按此顺序）。
+    english_order = [f"{chr(65 + i)}-upper" for i in range(26)] + [
+        f"{chr(97 + i)}-lower" for i in range(26)
     ]
 
     app_data = {
